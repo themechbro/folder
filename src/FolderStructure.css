@@ -1,0 +1,37 @@
+/* Folder styling */
+.folder {
+  cursor: pointer;
+  padding-left: 10px;
+  font-weight: bold;
+  color: #3498db; /* Folder text color */
+  background-color: #f0f0f0; /* Folder background color */
+}
+
+.folder.open {
+  color: #e74c3c; /* Open folder text color */
+  background-color: #f0f0f0; /* Open folder background color */
+}
+
+/* File styling */
+.file {
+  padding-left: 20px;
+  color: #333;
+  background-color: #f9f9f9; /* File background color */
+}
+
+/* Hover effect for folders */
+.folder:hover {
+  background-color: #e0e0e0; /* Hovered folder background color */
+}
+
+/* Transition effect for folder icons */
+.folder::before {
+  content: '▶️';
+  display: inline-block;
+  margin-right: 5px;
+  transition: transform 0.3s;
+}
+
+.folder.open::before {
+  transform: rotate(90deg);
+}
